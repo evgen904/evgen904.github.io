@@ -528,103 +528,323 @@
                 </div>
             </div>
         </div>
-        
-    
-        <div class="site-inner">
-            <h1 class="center">
-                КОНТАКТЫ
-            </h1>
 
-            <div class="page-contacts2">
-                <div class="page-contacts2-desc">
-                    <div class="page-contacts2-desc-info">
-                        <span class="page-contacts2-desc-info-title">
-                            По общим вопросам:  
-                        </span>
-                        <span class="page-contacts2-desc-info-val">
-                            <a class="tel" href="tel:8 (499) 500-38-89">8 (499) 500-38-89</a>
-                        </span>
-                    </div>
-                    <div class="page-contacts2-desc-info">
-                        <span class="page-contacts2-desc-info-title">
-                            По вопросам сотрудничества:  
-                        </span>
-                        <span class="page-contacts2-desc-info-val">
-                            <a class="tel" href="tel:8 (495) 648-67-25">8 (495) 648-67-25</a>
-                        </span>
-                    </div>
-                    <div class="page-contacts2-desc-info">
-                        <span class="page-contacts2-desc-info-title">
-                            Адрес: 
-                        </span>
-                        <span class="page-contacts2-desc-info-val">
-                            г. Москва, Холодильный переулок, д. 3 к. 1, офис 412
-                        </span>
-                    </div>
-                    <div class="page-contacts2-desc-info">
-                        <span class="page-contacts2-desc-info-title">
-                            Время работы:
-                        </span>
-                        <span class="page-contacts2-desc-info-val">
-                             9:00 — 18:00 <span style="color: #909090;">(пн — пт)</span>
-                        </span>
-                    </div>
-                    <div class="page-contacts2-desc-info">
-                        <span class="page-contacts2-desc-info-title">
-                            E-mail: 
-                        </span>
-                        <span class="page-contacts2-desc-info-val">
-                            <a href="mailto:info@nadinco.ru ">info@nadinco.ru </a>
-                        </span>
-                    </div>
-                </div>
-                <div class="page-contacts2-map">
-                    <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ab87ec04bf0a133e090359a2bf66f72a77a57c2f0a5cef585175a67ec46a49b8f&amp;lang=ru_RU&amp;scroll=true"></script>
-                </div>
-            </div> 
 
-            <div class="contacts-form-wr">
-                <h2>
-                    НАПИШИТЕ НАМ:
-                </h2>
-                <div class="contacts-form">
-                    <div class="contacts-form-filed type-text">
-                        <div class="contacts-form-filed-val">
-                            <input type="text" required placeholder="Ваше имя">
+        <div class="site-inner form-order-wrap">
+            <h1 class="center order">Оформление заказа</h1>
+            <div class="form-order-text">
+                Вы можете <a href="#">войти</a> под своим логином или продолжить без регистрации.
+            </div>
+
+            <div class="form-order">
+                <div class="form-order-left">
+                    <form>
+                        <div class="form-in">
+                            <div class="form-step">
+                                <div class="form-step-title">
+                                    СПОСОБ ДОСТАВКИ
+                                </div>
+                                <div class="form-step-body">
+                                    <div class="type-radio">
+                                        <input type="radio" id="delivery-1" name="delivery" value="1">
+                                        <label for="delivery-1">
+                                            Доставка Почтой Росcии <a href="#">(БЕСПЛАТНО)</a>
+                                        </label>
+                                    </div>
+                                    <div class="type-radio">
+                                        <input type="radio" id="delivery-2" name="delivery" value="1">
+                                        <label for="delivery-2">                                            
+                                            Курьером за МКАД (до 10км) 300 руб.
+                                        </label>
+                                    </div>
+                                    <div class="type-radio">
+                                        <input type="radio" checked="" id="delivery-3" name="delivery" value="1">
+                                        <label for="delivery-3">                                            
+                                            Курьером по Москве в пределах МКАД <a href="#">(БЕСПЛАТНО)</a>
+                                        </label>
+                                    </div>
+                                    <div class="type-radio">
+                                        <input type="radio" id="delivery-4" name="delivery" value="1">
+                                        <label for="delivery-4">
+                                            до ТК Деловые Линии - <a href="#">(БЕСПЛАТНО)</a>
+                                        </label>
+                                    </div>
+                                    <div class="type-radio">
+                                        <input type="radio" id="delivery-5" name="delivery" value="1">
+                                        <label for="delivery-5">                                            
+                                            Другие ТК - 350 руб.
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-step">
+                                <div class="form-step-title">
+                                    АДРЕС ДОСТАВКИ
+                                </div>
+                                <div class="form-step-body pt-16">
+                                    <div class="field">
+                                        <div class="field-title">
+                                            Улица*
+                                        </div>
+                                        <div class="field-val two right">
+                                            <div class="field-val-input">
+                                                <input type="text" placeholder="Вилора Трифонова">
+                                                <div class="field-val-required">
+                                                    Пожалуйста, заполните поле
+                                                </div>
+                                            </div>
+                                            <div class="field-val-input">
+                                                <input type="text" placeholder="Индекс*" required>
+                                                <div class="field-val-required">
+                                                    Пожалуйста, заполните поле
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-step">
+                                <div class="form-step-title">
+                                    КОНТАКТНАЯ ИНФОРМАЦИЯ
+                                </div>
+                                <div class="form-step-body">
+                                    <div class="field">
+                                        <div class="field-val three">
+                                            <div class="field-val-input">
+                                                <input type="text" placeholder="Имя*" required>
+                                                <div class="field-val-required active">
+                                                    Пожалуйста, заполните поле
+                                                </div>
+                                            </div>
+                                            <div class="field-val-input">
+                                                <input type="text" placeholder="Отчество*" required>
+                                                <div class="field-val-required">
+                                                    Пожалуйста, заполните поле
+                                                </div>
+                                            </div>
+                                            <div class="field-val-input">
+                                                <input type="text" placeholder="Фамилия*" required>
+                                                <div class="field-val-required">
+                                                    Пожалуйста, заполните поле
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-val two">
+                                            <div class="field-val-input">
+                                                <input type="text" placeholder="Телефон*" required>
+                                                <div class="field-val-required">
+                                                    Пожалуйста, заполните поле
+                                                </div>
+                                            </div>
+                                            <div class="field-val-input">
+                                                <input type="text" placeholder="E-mail*" required>
+                                                <div class="field-val-required">
+                                                    Пожалуйста, заполните поле
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="field-val">
+                                            <div class="field-val-input">
+                                                <textarea cols="30" rows="10" placeholder="Комментарий к заказу"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-step">
+                                <div class="form-step-body">
+                                    <button type="submit">оформить заказ</button>
+                                </div>                                
+                            </div>
                         </div>
-                    </div>
-                    <div class="contacts-form-filed type-text">
-                        <div class="contacts-form-filed-val">
-                            <input type="email" placeholder="examle@mail.ru">
+                    </form>
+                </div>
+                <div class="form-order-right">
+                    <div class="cart-mini">
+                        <div class="cart-mini-title">
+                            <span>ВАШ ЗАКАЗ</span>
+                            <a href="#">Изменить</a>
                         </div>
-                    </div>
-                    <div class="contacts-form-filed type-text">
-                        <div class="contacts-form-filed-val">
-                            <input type="tel" placeholder="Телефон">
+                        <div class="cart-mini-title mob">
+                            <div>Корзина <strong>(13 180 ₽ )</strong></div>
+                            <div>
+                                2 товара
+                            </div>
                         </div>
-                    </div>
-                    <div class="contacts-form-filed type-textarea">
-                        <div class="contacts-form-filed-val">
-                            <textarea cols="30" rows="5" placeholder="Комментарий: "></textarea>
+                        <div class="cart-mini-product">
+                            <div class="product-wrapper">
+                                <div class="product-wrapper-img">
+                                    <a href="#"><img src="images/cart-mini.jpg" alt=""></a>
+                                </div>
+                                <div class="product-wrapper-desc">
+                                    <div class="product-wrapper-desc-name">
+                                        <a href="#">Baldessarini Ambre</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-vendor">
+                                        <a href="#">NADIN - VOL. 28</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-sum">
+                                        <div class="product-wrapper-desc-sum-count">
+                                            1 шт.
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-price">
+                                            6 590 ₽
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-total">
+                                            10 990 ₽  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-wrapper-img">
+                                    <a href="#"><img src="images/cart-mini.jpg" alt=""></a>
+                                </div>
+                                <div class="product-wrapper-desc">
+                                    <div class="product-wrapper-desc-name">
+                                        <a href="#">Baldessarini Ambre</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-vendor">
+                                        <a href="#">NADIN - VOL. 28</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-sum">
+                                        <div class="product-wrapper-desc-sum-count">
+                                            1 шт.
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-price">
+                                            6 590 ₽
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-total">
+                                            10 990 ₽  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-wrapper-img">
+                                    <a href="#"><img src="images/cart-mini.jpg" alt=""></a>
+                                </div>
+                                <div class="product-wrapper-desc">
+                                    <div class="product-wrapper-desc-name">
+                                        <a href="#">Baldessarini Ambre</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-vendor">
+                                        <a href="#">NADIN - VOL. 28</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-sum">
+                                        <div class="product-wrapper-desc-sum-count">
+                                            1 шт.
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-price">
+                                            6 590 ₽
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-total">
+                                            10 990 ₽  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contacts-form-filed type-html">
-                        <div class="contacts-form-filed-val">
-                            Оставляя заявку, Вы принимаете <a href="#">политику конфиденциальности</a>
+                        <div class="cart-mini-product owl-carousel mob js-slider-product-order">
+                            <div class="product-wrapper">
+                                <div class="product-wrapper-img">
+                                    <a href="#"><img src="images/cart-mini.jpg" alt=""></a>
+                                </div>
+                                <div class="product-wrapper-desc">
+                                    <div class="product-wrapper-desc-name">
+                                        <a href="#">Baldessarini Ambre</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-vendor">
+                                        <a href="#">NADIN - VOL. 28</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-sum">
+                                        <div class="product-wrapper-desc-sum-count">
+                                            1 шт.
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-price">
+                                            6 590 ₽
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-total">
+                                            10 990 ₽  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-wrapper-img">
+                                    <a href="#"><img src="images/cart-mini.jpg" alt=""></a>
+                                </div>
+                                <div class="product-wrapper-desc">
+                                    <div class="product-wrapper-desc-name">
+                                        <a href="#">Baldessarini Ambre</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-vendor">
+                                        <a href="#">NADIN - VOL. 28</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-sum">
+                                        <div class="product-wrapper-desc-sum-count">
+                                            1 шт.
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-price">
+                                            6 590 ₽
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-total">
+                                            10 990 ₽  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-wrapper">
+                                <div class="product-wrapper-img">
+                                    <a href="#"><img src="images/cart-mini.jpg" alt=""></a>
+                                </div>
+                                <div class="product-wrapper-desc">
+                                    <div class="product-wrapper-desc-name">
+                                        <a href="#">Baldessarini Ambre</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-vendor">
+                                        <a href="#">NADIN - VOL. 28</a>
+                                    </div>
+                                    <div class="product-wrapper-desc-sum">
+                                        <div class="product-wrapper-desc-sum-count">
+                                            1 шт.
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-price">
+                                            6 590 ₽
+                                        </div>
+                                        <div class="product-wrapper-desc-sum-total">
+                                            10 990 ₽  
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="contacts-form-filed type-button">
-                        <div class="contacts-form-filed-val">
-                            <button type="submit">отправить</button>
+                        <div class="cart-mini-total">
+                            <div>
+                                <span>Сумма:</span> 22 970 ₽.
+                            </div>
+                            <div>
+                                <span>Cкидка:</span> 8 600 ₽.
+                            </div>
+                            <div>
+                                <span>Доставка:</span> 0 ₽.
+                            </div>
+                            <div>
+                                <span>Итого:</span> 13 180 ₽.
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
+
+
         </div>
 
 
-
+        
+        
+            
         <div class="block-ico-bot-wr">
             <div class="block-ico-bot site-inner">
                 <div>
@@ -640,7 +860,7 @@
                     Бесплатная доставка
                 </div>
             </div>
-        </div>           
+        </div>       
         <footer class="site-footer">
             <div class="site-inner">
                 <div class="site-footer-top">
