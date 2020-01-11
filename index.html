@@ -1,67 +1,104 @@
 <!doctype html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Website Title</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/styles.css">
-    </head>
-    <body>
-    
-    <div class="gallery">
-        <div class="description">
-            <h1>Галерея по типу Google Photos</h1>
-            <h2>Пример JSON-a в нужном формате:</h2>
-            <pre>
-            {
-                "galleryImages" : [
-                    {
-                        "url": "https://don16obqbay2c.cloudfront.net/frontend-test-task/images/493550746.jpg",
-                        "width": 640,
-                        "height": 426
-                    },
-                    {
-                        "url": "https://don16obqbay2c.cloudfront.net/frontend-test-task/images/448964007.jpg",
-                        "width": 1920,
-                        "height": 1200
-                    },
-                    {
-                        "url": "https://don16obqbay2c.cloudfront.net/frontend-test-task/images/493550739.jpg",
-                        "width": 640,
-                        "height": 426
-                    }
-                ]
-            }</pre>
-            <div class="link-example">
-                <strong>Пример ссылки:</strong>
-                <span title="Кликните чтобы сохранить ссылку в буфер обмена." class="js-write-text">https://don16obqbay2c.cloudfront.net/frontend-test-task/gallery-images.json</span>
-            </div>
-        </div>
-        <div class="loader">
-            <div class="loader-fields">
-                <input type="text" value="" placeholder="Укажите путь до json файла" class="js-url-loader">
-                <button type="button" class="js-btn-loader">Загрузить</button>
-            </div>
-            <div class="loader-hint hidden js-hint-loader"></div>
-        </div>
-        <div class="images js-add-images"></div>
-    </div>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset='utf-8'>
+<head>
+    <title>Monthly - Event Tests</title>
+	<link rel="stylesheet" href="css/monthly.css">
+	<style type="text/css">
+		body {
+			font-family: Calibri;
+			background-color: #f0f0f0;
+			padding: 0em 1em;
+		}
+		#mycalendar {
+			width: 100%;
+			margin: 2em auto 0 auto;
+			max-width: 80em;
+			border: 1px solid #666;
+			font-size: 14px;
+		}
+		.monthly-day .monthly-event-indicator {
+			height: auto;
+			white-space: normal;
+			font-size: 18px;
+		}
+		.monthly-day .monthly-event-indicator span {
+			white-space: normal;
+		}
+	</style>
+</head>
+<body>
+<div class="monthly" id="mycalendar"></div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/monthly.js"></script>
+<script type="text/javascript">
 
-    <div class="js-slider hidden">
-        <div class="gallery-zoom">
-            <div class="gallery-zoom--images">
-                <div class="slider js-slider-zoom" data-active="0"></div>            
-            </div>
-            <button class="gallery-zoom--prev js-slider-prev"></button>
-            <button class="gallery-zoom--next js-slider-next"></button>
-            <button class="gallery-zoom--close js-slider-close"></button>
-        </div> 
-    </div>
-    
+	var sampleEvents = {
+	"monthly": [
+		{
+		"id": 1,
+		"name": "особенности монтажа потолков грильято",
+		"startdate": "2020-01-01",
+		"enddate": "2020-01-01",
+		"starttime": "12:00",
+		"endtime": "2:00",
+		"color": "#99CCCC",
+		"url": "http://albes.ru/"
+		},
+		{
+		"id": 2,
+		"name": "Google",
+		"startdate": "2020-01-20",
+		"enddate": "2020-01-20",
+		"starttime": "12:00",
+		"endtime": "2:00",
+		"color": "#CC99CC",
+		"url": "https://www.google.com/"
+		},
+		{
+		"id": 3,
+		"name": "Yandex",
+		"startdate": "2020-01-15",
+		"enddate": "2020-01-15",
+		"starttime": "",
+		"endtime": "",
+		"color": "#666699",
+		"url": "https://www.yandex.ru/"
+		},
+		{
+		"id": 8,
+		"name": "особенности монтажа потолков грильято",
+		"startdate": "2020-01-20",
+		"enddate": "2020-01-20",
+		"starttime": "",
+		"endtime": "",
+		"color": "#666699",
+		"url": "http://albes.ru/"
+		},
+		{
+		"id": 4,
+		"name": "особенности монтажа потолков грильято",
+		"startdate": "2020-01-25",
+		"enddate": "2020-01-25",
+		"starttime": "12:00",
+		"endtime": "02:00",
+		"color": "#996666",
+		"url": "http://albes.ru/"
+		}
+	]
+	};
 
-    <script src="scripts/app.js"></script>
-    </body>
-</html>
+	$(window).load( function() {
+		$('#mycalendar').monthly({
+			mode: 'event',
+			dataType: 'json',
+			weekStart:'Mon',
+			linkCalendarToEventUrl: true,
+			eventList: false,
+			events: sampleEvents
+		});
+	});
+</script>
+</body></html>
