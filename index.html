@@ -1,104 +1,52 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta charset='utf-8'>
 <head>
-    <title>Monthly - Event Tests</title>
-	<link rel="stylesheet" href="css/monthly.css">
-	<style type="text/css">
-		body {
-			font-family: Calibri;
-			background-color: #f0f0f0;
-			padding: 0em 1em;
-		}
-		#mycalendar {
-			width: 100%;
-			margin: 2em auto 0 auto;
-			max-width: 80em;
-			border: 1px solid #666;
-			font-size: 14px;
-		}
-		.monthly-day .monthly-event-indicator {
-			height: auto;
-			white-space: normal;
-			font-size: 18px;
-		}
-		.monthly-day .monthly-event-indicator span {
-			white-space: normal;
-		}
-	</style>
+	<meta charset="UTF-8">
+	<title>Document</title>
 </head>
 <body>
-<div class="monthly" id="mycalendar"></div>
-<script type="text/javascript" src="js/jquery.js"></script>
-<script type="text/javascript" src="js/monthly.js"></script>
-<script type="text/javascript">
+	
 
-	var sampleEvents = {
-	"monthly": [
-		{
-		"id": 1,
-		"name": "особенности монтажа потолков грильято",
-		"startdate": "2020-01-01",
-		"enddate": "2020-01-01",
-		"starttime": "12:00",
-		"endtime": "2:00",
-		"color": "#99CCCC",
-		"url": "http://albes.ru/"
-		},
-		{
-		"id": 2,
-		"name": "Google",
-		"startdate": "2020-01-20",
-		"enddate": "2020-01-20",
-		"starttime": "12:00",
-		"endtime": "2:00",
-		"color": "#CC99CC",
-		"url": "https://www.google.com/"
-		},
-		{
-		"id": 3,
-		"name": "Yandex",
-		"startdate": "2020-01-15",
-		"enddate": "2020-01-15",
-		"starttime": "",
-		"endtime": "",
-		"color": "#666699",
-		"url": "https://www.yandex.ru/"
-		},
-		{
-		"id": 8,
-		"name": "особенности монтажа потолков грильято",
-		"startdate": "2020-01-20",
-		"enddate": "2020-01-20",
-		"starttime": "",
-		"endtime": "",
-		"color": "#666699",
-		"url": "http://albes.ru/"
-		},
-		{
-		"id": 4,
-		"name": "особенности монтажа потолков грильято",
-		"startdate": "2020-01-25",
-		"enddate": "2020-01-25",
-		"starttime": "12:00",
-		"endtime": "02:00",
-		"color": "#996666",
-		"url": "http://albes.ru/"
-		}
-	]
-	};
+<style>
+	
+	.modal-block {
+		width: 100%;
+		max-width: 600px;
+		border: 1px solid #ccc;
+		margin: 20px auto;
+		background: url('bg.png') 0 0 no-repeat;
+		-webkit-background-size: 100% auto;
+		background-size: 100% auto;
+		height: 380px;
+		color: #fff;
+		font-size: 11px;
+		box-sizing: border-box;
+		padding: 128px 33px 0 280px;
+		font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+	}
+	.modal-block p {
+		margin: 4px 0;
+	}
+	.modal-block a {
+		color: #fff;
+		text-decoration: underline;
+	}
+	.modal-block a:hover {
+		text-decoration: none;
+	}
 
-	$(window).load( function() {
-		$('#mycalendar').monthly({
-			mode: 'event',
-			dataType: 'json',
-			weekStart:'Mon',
-			linkCalendarToEventUrl: true,
-			eventList: false,
-			events: sampleEvents
-		});
-	});
-</script>
-</body></html>
+</style>
+
+
+<div class="modal-block">
+<p>1. Подключите бесплатную функцию «Мгновенное бронирование» <a href="#">в Моих объектах</a>.</p>
+<p>2. Посмотрите <a href="#">запросы на подбор жилья в своем городе.</a></p>
+<p>3. Установите наше бесплатное приложение для партнёров <a href="#">«Сдавайся».</a></p>
+<p>4. Подключите «Приоритетное размещение» <a href="#">в Моих объектах</a> от 10 рублей в сутки.</p>
+<p>5. Настройте синхронизацию календаря с <a href="#">менеджерами каналов.</a></p>
+</div>
+
+
+
+</body>
+</html>
