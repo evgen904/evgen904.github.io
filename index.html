@@ -1,1 +1,223 @@
-<!DOCTYPE html><html lang=en><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1"><link rel=icon href=/favicon.ico><title>good-lock</title><link href=/css/layout-components-Base-baseLoader-vue.f26546fb.css rel=prefetch><link href=/css/layout-components-Catalog-catalogMenu-vue.a27e151b.css rel=prefetch><link href=/css/layout-components-Catalog-catalogTable-vue.a9731e87.css rel=prefetch><link href=/css/layout-components-Catalog-modalHead-vue.a41f0c22.css rel=prefetch><link href=/css/layout-components-Catalog-modalProduct-vue.33db607b.css rel=prefetch><link href=/css/layout-components-Dashboard-mutualSettlementTable-vue.54fd7442.css rel=prefetch><link href=/css/layout-components-Dashboard-mutualSettlementTable-vue~layout-components-Dashboard-ordersTable-vue~la~cc65caef.f26546fb.css rel=prefetch><link href=/css/layout-components-Dashboard-notificationsTable-vue.5532ae5d.css rel=prefetch><link href=/css/layout-components-Dashboard-ordersTable-vue.118e1107.css rel=prefetch><link href=/css/layout-components-Dashboard-popupPanel-vue.8f2aed10.css rel=prefetch><link href=/css/layout-components-Footer-index-vue.0413a46f.css rel=prefetch><link href=/css/layout-components-Head-PathHead-vue.691b0e13.css rel=prefetch><link href=/css/layout-components-Head-index-vue.f04befba.css rel=prefetch><link href=/css/layout-components-Header-index-vue.7892240d.css rel=prefetch><link href=/css/layout-components-Order-catalogMenu-vue.419d129f.css rel=prefetch><link href=/css/layout-components-Order-orderTable-vue.31185f5b.css rel=prefetch><link href=/css/layout-components-Order-selectProducts-vue~layout-views-selection-vue.51ef1736.css rel=prefetch><link href=/css/layout-components-Search-index-vue.6e9807a6.css rel=prefetch><link href=/css/layout-layouts-auth-vue.907ab114.css rel=prefetch><link href=/css/layout-layouts-default-vue.2ea19677.css rel=prefetch><link href=/css/layout-views-404-vue.cdc8eae6.css rel=prefetch><link href=/css/layout-views-catalog-vue.35b4bab8.css rel=prefetch><link href=/css/layout-views-dashboard-vue.6792c90e.css rel=prefetch><link href=/css/layout-views-login-vue.3652a5c6.css rel=prefetch><link href=/css/layout-views-order-vue.2310bef4.css rel=prefetch><link href=/css/layout-views-selection-vue.a96efc61.css rel=prefetch><link href=/js/layout-components-Base-baseLoader-vue.83577200.js rel=prefetch><link href=/js/layout-components-Catalog-catalogMenu-vue.0dae2daa.js rel=prefetch><link href=/js/layout-components-Catalog-catalogTable-vue.27ab8891.js rel=prefetch><link href=/js/layout-components-Catalog-modalHead-vue.bffeea3d.js rel=prefetch><link href=/js/layout-components-Catalog-modalProduct-vue.dcc26396.js rel=prefetch><link href=/js/layout-components-Dashboard-mutualSettlementTable-vue.e1d643c3.js rel=prefetch><link href=/js/layout-components-Dashboard-mutualSettlementTable-vue~layout-components-Dashboard-ordersTable-vue~la~cc65caef.a2a97fb9.js rel=prefetch><link href=/js/layout-components-Dashboard-notificationsTable-vue.f53c9d37.js rel=prefetch><link href=/js/layout-components-Dashboard-ordersTable-vue.ebe1ae4e.js rel=prefetch><link href=/js/layout-components-Dashboard-popupPanel-vue.5f9a7b26.js rel=prefetch><link href=/js/layout-components-Footer-index-vue.e7269e25.js rel=prefetch><link href=/js/layout-components-Head-PathHead-vue.37f9588a.js rel=prefetch><link href=/js/layout-components-Head-index-vue.5a1ba924.js rel=prefetch><link href=/js/layout-components-Header-index-vue.1bcbeed4.js rel=prefetch><link href=/js/layout-components-Order-catalogMenu-vue.1502b63c.js rel=prefetch><link href=/js/layout-components-Order-orderTable-vue.b7ccd1ba.js rel=prefetch><link href=/js/layout-components-Order-selectProducts-vue.16ada3d0.js rel=prefetch><link href=/js/layout-components-Order-selectProducts-vue~layout-views-selection-vue.306102bb.js rel=prefetch><link href=/js/layout-components-Search-index-vue.9b773112.js rel=prefetch><link href=/js/layout-layouts-auth-vue.d416bace.js rel=prefetch><link href=/js/layout-layouts-default-vue.26f4fc23.js rel=prefetch><link href=/js/layout-views-404-vue.83a8ccd2.js rel=prefetch><link href=/js/layout-views-catalog-vue.fa63a2c0.js rel=prefetch><link href=/js/layout-views-dashboard-vue.5abc6cb9.js rel=prefetch><link href=/js/layout-views-login-vue.494fc287.js rel=prefetch><link href=/js/layout-views-order-vue.deaa9b10.js rel=prefetch><link href=/js/layout-views-selection-vue.efd9c1f3.js rel=prefetch><link href=/css/app.adc5747b.css rel=preload as=style><link href=/js/app.2ecf4fcc.js rel=preload as=script><link href=/js/chunk-vendors.2f175d79.js rel=preload as=script><link href=/css/app.adc5747b.css rel=stylesheet></head><body><noscript><strong>We're sorry but good-lock doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript><div id=app></div><script src=/js/chunk-vendors.2f175d79.js></script><script src=/js/app.2ecf4fcc.js></script></body></html>
+<!doctype html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Website Title</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <link rel="stylesheet" href="styles/styles.css">
+    </head>
+    <body>
+
+
+
+    <div class="filter-shop">
+        <div class="filter-shop--range">
+            <div id="range-price"></div>
+        </div>
+        <div class="filter-shop--field">
+            <div class="field-title js-btn-toggle-block">
+                Категории
+                <div class="toggle-btn"></div>
+            </div>
+            <div class="field-body folder">
+                <ul class="js-checkbox-event">
+                    <li class="js-parent-checkbox">
+                        <div class="folder-name-wr js-first-checkbox">
+                            <div class="checkbox-wr folder-name">
+                                <input type="checkbox" id="id50">
+                                <label for="id50">Девочкам (15)</label>
+                            </div>
+                            <div class="toggle-btn js-btn-toggle-folder"></div>
+                        </div>
+                        <ul class="js-children-checkbox">
+                            <li>
+                                <div class="checkbox-wr">
+                                    <input type="checkbox" id="id222">
+                                    <label for="id222">Melissa - (2)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-wr">
+                                    <input type="checkbox" id="id51">
+                                    <label for="id51">Melissa - (2)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-wr">
+                                    <input type="checkbox" id="id52">
+                                    <label for="id52">Melissa - (2)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-wr">
+                                    <input type="checkbox" id="id53">
+                                    <label for="id53">Melissa - (2)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-wr">
+                                    <input type="checkbox" id="id54">
+                                    <label for="id54">Melissa - (2)</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="js-parent-checkbox">
+                        <div class="folder-name-wr js-first-checkbox">
+                            <div class="checkbox-wr folder-name">
+                                <input type="checkbox" id="id60">
+                                <label for="id60">Девочкам (15)</label>
+                            </div>
+                            <div class="toggle-btn js-btn-toggle-folder"></div>
+                        </div>
+                        <ul class="js-children-checkbox">
+                            <li>
+                                <div class="checkbox-wr">
+                                    <input type="checkbox" id="id61">
+                                    <label for="id61">Melissa - (2)</label>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="checkbox-wr">
+                                    <input type="checkbox" id="id62">
+                                    <label for="id62">Melissa - (2)</label>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="js-parent-checkbox">
+                        <div class="folder-name-wr js-first-checkbox">
+                            <div class="checkbox-wr folder-name">
+                                <input type="checkbox" id="id80">
+                                <label for="id80">Девочкам (15)</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="js-parent-checkbox">
+                        <div class="folder-name-wr js-first-checkbox">
+                            <div class="checkbox-wr folder-name">
+                                <input type="checkbox" id="id90">
+                                <label for="id90">Девочкам (15)</label>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="js-parent-checkbox">
+                        <div class="folder-name-wr js-first-checkbox">
+                            <div class="checkbox-wr folder-name">
+                                <input type="checkbox" id="id88">
+                                <label for="id88">Девочкам (15)</label>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="filter-shop--field">
+            <div class="field-title js-btn-toggle-block">
+                Бренды
+                <div class="toggle-btn"></div>
+            </div>
+            <div class="field-body">
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id1">
+                    <label for="id1">Melissa - (2)</label>
+                </div>
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id2">
+                    <label for="id2">Melissa - (2)</label>
+                </div>
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id3">
+                    <label for="id3">Melissa - (2)</label>
+                </div>
+            </div>
+        </div>
+        <div class="filter-shop--field">
+            <div class="field-title js-btn-toggle-block">
+                Размеры
+                <div class="toggle-btn"></div>
+            </div>
+            <div class="field-body col-2">
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id4">
+                    <label for="id4">20 - (2)</label>
+                </div>
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id5">
+                    <label for="id5">20 - (2)</label>
+                </div>
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id6">
+                    <label for="id6">20 - (2)</label>
+                </div>
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id7">
+                    <label for="id7">20 - (2)</label>
+                </div>
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id8">
+                    <label for="id8">20 - (2)</label>
+                </div>
+                <div class="checkbox-wr">
+                    <input type="checkbox" id="id9">
+                    <label for="id9">20 - (2)</label>
+                </div>
+            </div>
+        </div>
+        <div class="filter-shop--field">
+            <div class="field-title js-btn-toggle-block">
+                Цвета
+                <div class="toggle-btn"></div>
+            </div>
+            <div class="field-body type-color">
+                <div class="checkbox-color">
+                    <input type="checkbox" id="id11">
+                    <label for="id11" style="background: url('../images/img1.jpg') 90% top no-repeat;"></label>
+                </div>
+                <div class="checkbox-color">
+                    <input type="checkbox" id="id12">
+                    <label for="id12" style="background: #dd9933;"></label>
+                </div>
+                <div class="checkbox-color">
+                    <input type="checkbox" id="id13">
+                    <label for="id13" style="background: #dd9933;"></label>
+                </div>
+                <div class="checkbox-color">
+                    <input type="checkbox" id="id14">
+                    <label for="id14" style="background: #dd9933;"></label>
+                </div>
+                <div class="checkbox-color">
+                    <input type="checkbox" id="id15">
+                    <label for="id15" style="background: #dd9933;"></label>
+                </div>
+                <div class="checkbox-color">
+                    <input type="checkbox" id="id16">
+                    <label for="id16" style="background: #dd9933;"></label>
+                </div>
+                <div class="checkbox-color">
+                    <input type="checkbox" id="id17">
+                    <label for="id17" style="background: #dd9933;"></label>
+                </div>
+            </div>
+        </div>
+        <div class="filter-shop--reset">
+            <button>
+                Сбросить фильтры
+                <div class="ico">
+                    <img src="../images/ico-reset.svg">
+                </div>
+            </button>
+        </div>
+    </div>
+
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+    <br><br><br><br><br>
+
+
+
+    <script src="scripts/app.js"></script>
+    </body>
+</html>
