@@ -25,8 +25,8 @@
   animation-duration: 3s; }
 
 .s3-animator-d4 {
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s; }
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s; }
 
 .s3-animator-d5 {
   -webkit-animation-duration: 5s;
@@ -1553,8 +1553,8 @@
 @-webkit-keyframes s3-animator-zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3); }
+    -webkit-transform: scale3d(0.3, 0.3, 0.3) translateY(200%);
+    transform: scale3d(0.3, 0.3, 0.3) translateY(200%); }
 
   50% {
     opacity: 1; } }
@@ -1562,8 +1562,8 @@
 @keyframes s3-animator-zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3); }
+    -webkit-transform: scale3d(0.3, 0.3, 0.3) translateY(200%);
+    transform: scale3d(0.3, 0.3, 0.3)  translateY(200%); }
 
   50% {
     opacity: 1; } }
