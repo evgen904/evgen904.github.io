@@ -1553,8 +1553,8 @@
 @-webkit-keyframes s3-animator-zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3) translateY(200%);
-    transform: scale3d(0.3, 0.3, 0.3) translateY(200%); }
+    -webkit-transform: scale3d(0.3, 0.3, 0.3) ;
+    transform: scale3d(0.3, 0.3, 0.3) ; }
 
   50% {
     opacity: 1; } }
@@ -1562,8 +1562,8 @@
 @keyframes s3-animator-zoomIn {
   0% {
     opacity: 0;
-    -webkit-transform: scale3d(0.3, 0.3, 0.3) translateY(200%);
-    transform: scale3d(0.3, 0.3, 0.3)  translateY(200%); }
+    -webkit-transform: scale3d(0.3, 0.3, 0.3) ;
+    transform: scale3d(0.3, 0.3, 0.3)  ; }
 
   50% {
     opacity: 1; } }
