@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>map</title>
+    <desc>Created with Sketch.</desc>
+    <g id="карта+поиск" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="меню" transform="translate(-343.000000, -82.000000)" fill="#000000" fill-rule="nonzero">
+            <g id="map" transform="translate(343.000000, 82.000000)">
+                <path d="M11.1647401,2.32448 L4.77804574,0.27648 L0.0306029106,2.56 L0.0306029106,15.99488 L4.86320166,13.6704 L11.249896,15.7184 L15.9973389,13.43488 L15.9973389,0 L11.1647401,2.32448 Z M14.9328898,12.8 L11.1647401,14.61248 L5.35284823,12.7488 L5.35284823,2.87744 L4.28839917,3.38944 L4.28839917,12.8 L1.09505198,14.336 L1.09505198,3.19488 L4.86320166,1.3824 L10.6750936,3.24608 L10.6750936,13.11744 L11.7395426,12.60544 L11.7395426,3.19488 L14.9328898,1.65888 L14.9328898,12.8 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 40 40" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.6 (67491) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 10</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="20" cy="20" r="20"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="40" height="40" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="календарь" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="loading" transform="translate(-627.000000, -224.000000)">
+            <g id="Group-10" transform="translate(627.000000, 224.000000)">
+                <circle id="Oval-1" stroke="#D8D8D8" stroke-width="4" cx="20" cy="20" r="18"></circle>
+                <use id="Oval-1" stroke="#F51449" mask="url(#mask-2)" stroke-width="8" stroke-dasharray="34,160,1,7" xlink:href="#path-1"></use>
+            </g>
+        </g>
+    </g>
+</svg>
