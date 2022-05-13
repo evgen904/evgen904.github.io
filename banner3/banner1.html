@@ -9,8 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>	
     	
-
-body,html {
+        body,html {
     padding: 0;
     margin: 0;
     height: 100%
@@ -145,7 +144,8 @@ body,html {
 .block--checkbox {
     position: relative;
     z-index: 2;
-    margin-bottom: 40px
+    margin-bottom: 32px;
+    padding-top: 8px
 }
 
 .block--checkbox>span {
@@ -338,6 +338,14 @@ body,html {
     position: absolute;
     right: 156px;
     top: 14px
+}
+
+.block--pillow {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%
 }
 
 .block.animate .block--pillow-1 {
@@ -754,13 +762,13 @@ body,html {
     }
 
     90% {
-        -webkit-transform: translate3d(20px,10px,0) rotate(4deg);
-        transform: translate3d(20px,10px,0) rotate(4deg)
+        -webkit-transform: translate3d(18px,12px,0) rotate(4deg);
+        transform: translate3d(18px,12px,0) rotate(4deg)
     }
 
     100% {
-        -webkit-transform: translate3d(4px,8px,0) rotate(0);
-        transform: translate3d(4px,8px,0) rotate(0)
+        -webkit-transform: translate3d(20px,10px,0) rotate(0);
+        transform: translate3d(20px,10px,0) rotate(0)
     }
 }
 
@@ -811,13 +819,13 @@ body,html {
     }
 
     90% {
-        -webkit-transform: translate3d(20px,10px,0) rotate(4deg);
-        transform: translate3d(20px,10px,0) rotate(4deg)
+        -webkit-transform: translate3d(18px,12px,0) rotate(4deg);
+        transform: translate3d(18px,12px,0) rotate(4deg)
     }
 
     100% {
-        -webkit-transform: translate3d(4px,8px,0) rotate(0);
-        transform: translate3d(4px,8px,0) rotate(0)
+        -webkit-transform: translate3d(20px,10px,0) rotate(0);
+        transform: translate3d(20px,10px,0) rotate(0)
     }
 }
 
@@ -1061,21 +1069,23 @@ body,html {
 </head>
 <body>
 <div class="block js-block animate">
-    <div class="block--pillow-1 js-pillow" data-speed="30">
-        <img src="pillow-1.png" alt="">
-    </div>
-    <div class="block--pillow-2 js-pillow" data-speed="18">
-        <img src="pillow-2.png" alt="">
-    </div>
-    <div class="block--pillow-3 js-pillow" data-speed="20">
-        <img src="pillow-3.png" alt="">
-    </div>
-    <div class="block--pillow-4 js-pillow" data-speed="14">
-        <img src="pillow-4.png" alt="">
-    </div>
-    <div class="block--pillow-5 js-pillow" data-speed="50">
-        <img src="pillow-5.png" alt="">
-    </div>
+    <div class="block--pillow js-pillow">
+        <div class="block--pillow-1" data-speed="30">
+            <img src="pillow-1.png" alt="">
+        </div>
+        <div class="block--pillow-2 " data-speed="18">
+            <img src="pillow-2.png" alt="">
+        </div>
+        <div class="block--pillow-3 " data-speed="20">
+            <img src="pillow-3.png" alt="">
+        </div>
+        <div class="block--pillow-4 " data-speed="14">
+            <img src="pillow-4.png" alt="">
+        </div>
+        <div class="block--pillow-5 " data-speed="50">
+            <img src="pillow-5.png" alt="">
+        </div>
+    </div>    
     <div class="block--logo">
         <img src="logo.png" alt="">
     </div>
@@ -1104,37 +1114,39 @@ body,html {
 	document.addEventListener("DOMContentLoaded", function () {
 		let eyes = document.querySelector('.js-eye');
 
-		document.addEventListener("mousemove", mouseTracking);
-		function mouseTracking(e) {
-		    if (eyes) {
-		        let mouseX = eyes.getBoundingClientRect().left;
-		        let mouseY = eyes.getBoundingClientRect().top;
-		        let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
-		        let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180;
-		        eyes.style.transform = `rotate(${rotationDegrees + 20}deg)`;
-		    }
-		}
+        document.addEventListener("mousemove", mouseTracking);
+        function mouseTracking(e) {
+            if (eyes) {
+                let mouseX = eyes.getBoundingClientRect().left;
+                let mouseY = eyes.getBoundingClientRect().top;
+                let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
+                let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180;
+                eyes.style.transform = `rotate(${rotationDegrees + 20}deg)`;
+            }
+        }
 
-		function parallax(event) {
-		    document.querySelectorAll('.js-pillow').forEach(item => {
-		        let speed = item.getAttribute('data-speed')
-		        let shiftItemX = event.clientX*Number(speed)/1000
-		        let shiftItemY = event.clientY*Number(speed)/1000
-		        item.style.transform = `translate3d(${shiftItemX}px, ${shiftItemY}px, 0px)`
-		    })
-		}
+        function parallax(event) {
+            document.querySelectorAll('.js-pillow').forEach(item => {
+                //let speed = item.getAttribute('data-speed')
+                let speed = 30
+                let shiftItemX = event.clientX*Number(speed)/1000
+                let shiftItemY = event.clientY*Number(speed)/1000
+                item.style.transform = `translate3d(${shiftItemX}px, ${shiftItemY}px, 0px)`
+            })
+        }
 
-		let banner1 = document.querySelector('.js-block');
+        let banner1 = document.querySelector('.js-block');
 
-		if (banner1) {
-		    banner1.addEventListener('mousemove', parallax)
-		    banner1.addEventListener('mouseover', () => {
-		        banner1.classList.remove('animate');
-		    })
-		    banner1.addEventListener('mouseout', () => {
-		        banner1.classList.add('animate');
-		    })
-		}
+        if (banner1) {
+            banner1.addEventListener('mousemove', parallax)
+            banner1.addEventListener('mouseover', () => {
+                //banner1.classList.remove('animate');
+            })
+            banner1.addEventListener('mouseout', () => {
+                //banner1.classList.add('animate');
+            })
+        }
+
 
 	});
 </script>	
