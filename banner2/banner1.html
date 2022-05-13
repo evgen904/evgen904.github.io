@@ -968,29 +968,40 @@ body,html {
     width: 1200px;
     height: 100%;
     background-image: url(bg-1.jpg);
-    background-repeat: no-repeat;
-    background-position: 135% 0;
-    -webkit-animation: slideBg1 2s linear .1s;
-    animation: slideBg1 2s linear .1s
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    -webkit-animation: slideBg1 12s linear infinite;
+    animation: slideBg1 12s linear infinite;
+    -webkit-transform-origin: right;
+    -ms-transform-origin: right;
+    transform-origin: right
 }
 
 @-webkit-keyframes slideBg1 {
-    from {
-        background-position: 60% 0
+    0% {
+        background-position: 0 0
     }
 
-    to {
-        background-position: 120% 0
+    50% {
+        background-position: 100% 0
+    }
+
+    100% {
+        background-position: 0 0
     }
 }
 
 @keyframes slideBg1 {
-    from {
-        background-position: 60% 0
+    0% {
+        background-position: 0 0
     }
 
-    to {
-        background-position: 120% 0
+    50% {
+        background-position: 100% 0
+    }
+
+    100% {
+        background-position: 0 0
     }
 }
 
@@ -1009,8 +1020,8 @@ body,html {
 }
 
 .block.animate .block--bg2 {
-    -webkit-animation: slideBg2 2s linear .1s,rotateBg 1.5s linear infinite;
-    animation: slideBg2 2s linear .1s,rotateBg 1.5s linear infinite
+    -webkit-animation: slideBg2 2s linear .1s,rotateBg 4s linear infinite;
+    animation: slideBg2 2s linear .1s,rotateBg 4s linear infinite
 }
 
 @-webkit-keyframes slideBg2 {
@@ -1037,33 +1048,19 @@ body,html {
     0% {
         -webkit-transform: rotate(0);
         transform: rotate(0);
+        background-position: 140% 0
+    }
+
+    50% {
+        -webkit-transform: rotate(2.5deg);
+        transform: rotate(2.5deg);
         background-position: 100% 0
-    }
-
-    20% {
-        background-position: 140% 0
-    }
-
-    40% {
-        background-position: 160% 0
-    }
-
-    60% {
-        -webkit-transform: rotate(-.8deg);
-        transform: rotate(-.8deg);
-        background-position: 240% 0
-    }
-
-    80% {
-        -webkit-transform: rotate(2deg);
-        transform: rotate(2deg);
-        background-position: 140% 0
     }
 
     100% {
         -webkit-transform: rotate(0);
         transform: rotate(0);
-        background-position: 100% 0
+        background-position: 140% 0
     }
 }
 
@@ -1071,33 +1068,19 @@ body,html {
     0% {
         -webkit-transform: rotate(0);
         transform: rotate(0);
+        background-position: 140% 0
+    }
+
+    50% {
+        -webkit-transform: rotate(2.5deg);
+        transform: rotate(2.5deg);
         background-position: 100% 0
-    }
-
-    20% {
-        background-position: 140% 0
-    }
-
-    40% {
-        background-position: 160% 0
-    }
-
-    60% {
-        -webkit-transform: rotate(-.8deg);
-        transform: rotate(-.8deg);
-        background-position: 240% 0
-    }
-
-    80% {
-        -webkit-transform: rotate(2deg);
-        transform: rotate(2deg);
-        background-position: 140% 0
     }
 
     100% {
         -webkit-transform: rotate(0);
         transform: rotate(0);
-        background-position: 100% 0
+        background-position: 140% 0
     }
 }
 
