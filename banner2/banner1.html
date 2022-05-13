@@ -9,19 +9,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
    <style>	
     	
-        body,html {
-    padding: 0;
-    margin: 0;
-    height: 100%
-}
-
-* {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box
-}
-
-
-
+     
 body,html {
     padding: 0;
     margin: 0;
@@ -1007,6 +995,15 @@ body,html {
 
 .block--bg2 {
     width: 929px;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    top: 0;
+    overflow: hidden
+}
+
+.block--bg2 .bg2 {
+    width: 929px;
     height: calc(100% + 20px);
     position: absolute;
     right: -20px;
@@ -1019,7 +1016,7 @@ body,html {
     transform-origin: 400px 1000px
 }
 
-.block.animate .block--bg2 {
+.block.animate .block--bg2 .bg2 {
     -webkit-animation: slideBg2 2s linear .1s,rotateBg 4s linear infinite;
     animation: slideBg2 2s linear .1s,rotateBg 4s linear infinite
 }
@@ -1052,8 +1049,8 @@ body,html {
     }
 
     50% {
-        -webkit-transform: rotate(2.5deg);
-        transform: rotate(2.5deg);
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
         background-position: 100% 0
     }
 
@@ -1072,8 +1069,8 @@ body,html {
     }
 
     50% {
-        -webkit-transform: rotate(2.5deg);
-        transform: rotate(2.5deg);
+        -webkit-transform: rotate(3deg);
+        transform: rotate(3deg);
         background-position: 100% 0
     }
 
@@ -1099,6 +1096,7 @@ body,html {
 
 
 
+
     </style>	
 </head>
 <body>
@@ -1106,7 +1104,9 @@ body,html {
     <div class="block--bg1">
         <div class="bg1 js-parallax-bg1"></div>
     </div>
-    <div class="block--bg2 js-parallax-bg2"></div>
+    <div class="block--bg2 js-parallax-bg2">
+        <div class="bg2"></div>
+    </div>
     <div class="block--bg3"></div>
     <div class="block--logo">
         <img src="logo.png" alt="">
@@ -1152,15 +1152,15 @@ body,html {
         let banner2 = document.querySelector('.js-block2');
 
         function parallax2(event) {
-            let shiftItemX1 = event.clientX*Number(20)/1000
-            let shiftItemX2 = event.clientX*Number(50)/1000
-            bg1.style.transform = `translate3d(${shiftItemX1-40}px, 0px, 0px)`
+            //let shiftItemX1 = event.clientX*Number(20)/1000
+            let shiftItemX2 = event.clientX*Number(20)/1000
+            //bg1.style.transform = `translate3d(${shiftItemX1-40}px, 0px, 0px)`
             bg2.style.transform = `translate3d(${shiftItemX2}px, 0px, 0px)`
         }
 
-        // if (banner2) {
-        //     banner2.addEventListener('mousemove', parallax2) 
-        // }
+        if (banner2) {
+            banner2.addEventListener('mousemove', parallax2) 
+        }
 
 
 
