@@ -16,6 +16,8 @@
     		box-sizing: border-box;
     	}
 		
+
+
 .block {
     cursor: pointer;
     width: 1836px;
@@ -57,7 +59,7 @@
     left: 521px;
     background: #1c1c1c;
     width: 63px;
-    height: 64px
+    height: 70px
 }
 
 .block--cashback .eye-wr .eye-lid,.block--cashback .eye-wr .eyes {
@@ -76,7 +78,7 @@
 .block--cashback .eye-wr .eye-lid {
     margin-left: 2px;
     position: relative;
-    top: 0;
+    top: 4px;
     left: 0;
     border-radius: 100%;
     background-color: #fff;
@@ -650,10 +652,13 @@
     background: linear-gradient(270deg,rgba(28,28,28,0) 40%,#1c1c1c 70%)
 }
 
+
+
+
     </style>	
 </head>
 <body>
-<div class="block js-block animate">
+<div class="block js-block">
     <div class="block--pillow-1 js-pillow" data-speed="30">
         <img src="pillow-1.png" alt="">
     </div>
@@ -720,12 +725,12 @@
 		let banner1 = document.querySelector('.js-block');
 
 		if (banner1) {
-		    banner1.addEventListener('mousemove', parallax)
+		    document.addEventListener('mousemove', parallax)
 		    banner1.addEventListener('mouseover', () => {
-		        banner1.classList.remove('animate');
+		        //banner1.classList.remove('animate');
 		    })
 		    banner1.addEventListener('mouseout', () => {
-		        banner1.classList.add('animate');
+		        //banner1.classList.add('animate');
 		    })
 		}
 	});
