@@ -24,19 +24,22 @@
     cursor: pointer;
     width: 1836px;
     height: 572px;
-    background: rgb(28, 28, 28);
-    color: rgb(255, 255, 255);
-    font-family: Rubik, Arial, serif;
-    padding: 48px 0px 0px 80px;
+    background: #1c1c1c;
+    color: #fff;
+    font-family: Rubik,Arial,serif;
+    padding: 48px 0 0 80px;
     overflow: hidden;
     position: relative;
-    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 }
 
 .block--logo {
     margin-bottom: 36px;
     position: relative;
-    z-index: 2;
+    z-index: 2
 }
 
 .block--slogan {
@@ -44,47 +47,53 @@
     font-weight: 400;
     margin-bottom: 36px;
     position: relative;
-    z-index: 2;
+    z-index: 2
 }
 
 .block--cashback {
     position: relative;
-    z-index: 2;
+    z-index: 2
 }
 
 .block--cashback .eye-wr {
     position: absolute;
     top: 91px;
     left: 521px;
-    background: rgb(28, 28, 28);
+    background: #1c1c1c;
     width: 63px;
-    height: 70px;
+    height: 70px
 }
 
-.block--cashback .eye-wr .eye-lid, .block--cashback .eye-wr .eyes {
+.block--cashback .eye-wr .eye-lid,.block--cashback .eye-wr .eyes {
     position: absolute;
     left: 1em;
     top: 1.3em;
     width: 5.7em;
     height: 5.7em;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     text-align: center;
-    font-size: 0.65em;
+    font-size: .65em
 }
 
 .block--cashback .eye-wr .eye-lid {
     margin-left: 2px;
     position: relative;
     top: 4px;
-    left: 0px;
+    left: 0;
     border-radius: 100%;
-    background-color: rgb(255, 255, 255);
-    box-shadow: rgba(0, 0, 0, 0.1) 0.03em 0.14em;
-    animation: 10s ease-in-out 0s infinite normal forwards running blink;
+    background-color: #fff;
+    -webkit-box-shadow: .03em .14em rgba(0,0,0,.1);
+    box-shadow: .03em .14em rgba(0,0,0,.1);
+    -webkit-animation: blink forwards infinite 10s ease-in-out;
+    animation: blink forwards infinite 10s ease-in-out
 }
 
 .block--cashback .eye-wr .eyes {
-    transition: all 0.1s ease 0s;
+    -webkit-transition: all .1s ease;
+    -o-transition: all .1s ease;
+    transition: all .1s ease
 }
 
 .block--cashback .eye-wr .eye {
@@ -93,10 +102,10 @@
     border-radius: 100%;
     width: 75%;
     height: 75%;
-    background-color: rgb(0, 0, 0);
+    background-color: #000
 }
 
-.block--cashback .eye-wr .eye::after {
+.block--cashback .eye-wr .eye:after {
     --pupil-size: 1em;
     content: " ";
     position: absolute;
@@ -105,700 +114,831 @@
     border-radius: 100%;
     width: var(--pupil-size);
     height: var(--pupil-size);
-    background: rgb(255, 255, 255);
+    background: #fff
 }
 
 @-webkit-keyframes blink {
-    0%, 100%, 2%, 60%, 62% {
-        transform: scaleX(1) scaleY(1);
+    0%,100%,2%,60%,62% {
+        -webkit-transform: scaleX(1) scaleY(1);
+        transform: scaleX(1) scaleY(1)
     }
 
-    1%, 61% {
-        transform: scaleX(1.3) scaleY(0.1);
+    1%,61% {
+        -webkit-transform: scaleX(1.3) scaleY(.1);
+        transform: scaleX(1.3) scaleY(.1)
     }
 }
 
 @keyframes blink {
-    0%, 100%, 2%, 60%, 62% {
-        transform: scaleX(1) scaleY(1);
+    0%,100%,2%,60%,62% {
+        -webkit-transform: scaleX(1) scaleY(1);
+        transform: scaleX(1) scaleY(1)
     }
 
-    1%, 61% {
-        transform: scaleX(1.3) scaleY(0.1);
+    1%,61% {
+        -webkit-transform: scaleX(1.3) scaleY(.1);
+        transform: scaleX(1.3) scaleY(.1)
     }
 }
 
 .block--checkbox {
     position: relative;
     z-index: 2;
-    margin-bottom: 40px;
+    margin-bottom: 40px
 }
 
-.block--checkbox > span {
+.block--checkbox>span {
     display: inline-block;
     position: relative;
-    padding: 0px 0px 0px 40px;
+    padding: 0 0 0 40px;
     font-size: 35px;
     font-weight: 300;
     margin-right: 30px;
-    opacity: 0;
+    opacity: 0
 }
 
-.block--checkbox > span::after {
-    content: "";
+.block--checkbox>span:after {
+    content: '';
     display: block;
     position: absolute;
     top: 8px;
-    left: 0px;
+    left: 0;
     height: 27px;
     width: 27px;
-    background: url("checkbox.svg") 0px 0px no-repeat rgb(28, 28, 28);
+    background: #1c1c1c url(../images/dest/checkbox.svg) 0 0 no-repeat;
     border-radius: 5px;
-    opacity: 0;
+    opacity: 0
 }
 
-.block--checkbox > span::before {
-    content: "";
+.block--checkbox>span:before {
+    content: '';
     display: block;
     position: absolute;
     top: 8px;
-    left: 0px;
+    left: 0;
     height: 27px;
     width: 27px;
-    background: rgb(255, 255, 255);
-    border-radius: 5px;
+    background: #fff;
+    border-radius: 5px
 }
 
-.block--checkbox > span:nth-child(1) {
-    animation: 1s ease 0.5s 1 normal forwards running fade;
+.block--checkbox>span:nth-child(1) {
+    -webkit-animation: fade 1s forwards .5s;
+    animation: fade 1s forwards .5s
 }
 
-.block--checkbox > span:nth-child(1)::after {
-    animation: 0.3s ease 0.7s 1 normal forwards running fade;
+.block--checkbox>span:nth-child(1):after {
+    -webkit-animation: fade .3s forwards .7s;
+    animation: fade .3s forwards .7s
 }
 
-.block--checkbox > span:nth-child(2) {
-    animation: 1s ease 1.2s 1 normal forwards running fade;
+.block--checkbox>span:nth-child(2) {
+    -webkit-animation: fade 1s forwards 1.2s;
+    animation: fade 1s forwards 1.2s
 }
 
-.block--checkbox > span:nth-child(2)::after {
-    animation: 0.3s ease 1.4s 1 normal forwards running fade;
+.block--checkbox>span:nth-child(2):after {
+    -webkit-animation: fade .3s forwards 1.4s;
+    animation: fade .3s forwards 1.4s
 }
 
-.block--checkbox > span:nth-child(3) {
-    animation: 1s ease 1.8s 1 normal forwards running fade;
+.block--checkbox>span:nth-child(3) {
+    -webkit-animation: fade 1s forwards 1.8s;
+    animation: fade 1s forwards 1.8s
 }
 
-.block--checkbox > span:nth-child(3)::after {
-    animation: 0.3s ease 2s 1 normal forwards running fade;
+.block--checkbox>span:nth-child(3):after {
+    -webkit-animation: fade .3s forwards 2s;
+    animation: fade .3s forwards 2s
 }
 
 @-webkit-keyframes fade {
-    0% {
-        opacity: 0;
+    from {
+        opacity: 0
     }
 
-    100% {
-        opacity: 1;
+    to {
+        opacity: 1
     }
 }
 
 @keyframes fade {
-    0% {
-        opacity: 0;
+    from {
+        opacity: 0
     }
 
-    100% {
-        opacity: 1;
+    to {
+        opacity: 1
     }
 }
 
 .block--btn {
     position: relative;
-    z-index: 2;
+    z-index: 2
 }
 
-.block--btn > span {
+.block--btn>span {
     display: inline-block;
     text-align: center;
     width: 100%;
     font-size: 37px;
     font-weight: 400;
-    background: rgb(238, 32, 77);
+    background: #ff3461;
     border-radius: 13px;
     max-width: 332px;
     height: 74px;
     line-height: 74px;
     position: relative;
-    overflow: hidden;
+    overflow: hidden
 }
 
-.block--btn > span::after {
+.block--btn>span:after {
     content: "";
     display: block;
     width: 40px;
     height: 300px;
     margin-left: 60px;
-    background: rgba(255, 255, 255, 0.4);
+    background: rgba(255,255,255,.4);
+    -webkit-filter: blur(10px);
     filter: blur(10px);
     position: absolute;
     left: -120px;
     top: -150px;
     z-index: 1;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
     transform: rotate(45deg);
-    transition: all 0.1s ease 0s;
-    animation: 3s ease-in-out 5s infinite normal none running movingFlare;
+    -webkit-transition: all .1s;
+    -o-transition: all .1s;
+    transition: all .1s;
+    -webkit-animation: movingFlare 3s ease-in-out 5s infinite;
+    animation: movingFlare 3s ease-in-out 5s infinite
 }
 
 @-webkit-keyframes movingFlare {
     0% {
         left: -30px;
-        margin-left: 0px;
+        margin-left: 0
     }
 
     30% {
         left: 110%;
-        margin-left: 80px;
+        margin-left: 80px
     }
 
     100% {
         left: 110%;
-        margin-left: 80px;
+        margin-left: 80px
     }
 }
 
 @keyframes movingFlare {
     0% {
         left: -30px;
-        margin-left: 0px;
+        margin-left: 0
     }
 
     30% {
         left: 110%;
-        margin-left: 80px;
+        margin-left: 80px
     }
 
     100% {
         left: 110%;
-        margin-left: 80px;
+        margin-left: 80px
     }
 }
 
 .block--pillow-1 {
     position: absolute;
     right: 623px;
-    top: -168px;
+    top: -168px
 }
 
 .block--pillow-2 {
     position: absolute;
     right: 680px;
-    bottom: -154px;
+    bottom: -154px
 }
 
 .block--pillow-3 {
     position: absolute;
     right: 36px;
-    bottom: -132px;
+    bottom: -132px
 }
 
 .block--pillow-4 {
     position: absolute;
     right: -79px;
-    top: -237px;
+    top: -237px
 }
 
 .block--pillow-5 {
     position: absolute;
     right: 156px;
-    top: 14px;
+    top: 14px
 }
 
 .block--pillow {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     width: 100%;
-    height: 100%;
+    height: 100%
 }
 
 .block.animate .block--pillow-1 {
-    animation: 11s linear 0s infinite normal none running pillow1;
+    -webkit-animation: pillow1 11s linear infinite;
+    animation: pillow1 11s linear infinite
 }
 
 .block.animate .block--pillow-2 {
-    animation: 11s linear 0s infinite normal none running pillow2;
+    -webkit-animation: pillow2 11s linear infinite;
+    animation: pillow2 11s linear infinite
 }
 
 .block.animate .block--pillow-3 {
-    animation: 11s linear 0s infinite normal none running pillow3;
+    -webkit-animation: pillow3 11s linear infinite;
+    animation: pillow3 11s linear infinite
 }
 
 .block.animate .block--pillow-4 {
-    animation: 11s linear 0s infinite normal none running pillow4;
+    -webkit-animation: pillow4 11s linear infinite;
+    animation: pillow4 11s linear infinite
 }
 
 .block.animate .block--pillow-5 {
-    animation: 13s linear 0s infinite normal none running pillow5;
+    -webkit-animation: pillow5 13s linear infinite;
+    animation: pillow5 13s linear infinite
 }
 
 @-webkit-keyframes pillow1 {
     0% {
-        transform: translate3d(10px, 14px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(10px,14px,0) rotate(0);
+        transform: translate3d(10px,14px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(15px, 18px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(15px,18px,0) rotate(4deg);
+        transform: translate3d(15px,18px,0) rotate(4deg)
     }
 
     20% {
-        transform: translate3d(20px, 24px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(20px,24px,0) rotate(2deg);
+        transform: translate3d(20px,24px,0) rotate(2deg)
     }
 
     30% {
-        transform: translate3d(18px, 20px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(18px,20px,0) rotate(8deg);
+        transform: translate3d(18px,20px,0) rotate(8deg)
     }
 
     40% {
-        transform: translate3d(10px, 14px, 0px) rotate(16deg);
+        -webkit-transform: translate3d(10px,14px,0) rotate(16deg);
+        transform: translate3d(10px,14px,0) rotate(16deg)
     }
 
     50% {
-        transform: translate3d(6px, 10px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(6px,10px,0) rotate(10deg);
+        transform: translate3d(6px,10px,0) rotate(10deg)
     }
 
     60% {
-        transform: translate3d(0px, 2px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(0,2px,0) rotate(4deg);
+        transform: translate3d(0,2px,0) rotate(4deg)
     }
 
     70% {
-        transform: translate3d(10px, 9px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(10px,9px,0) rotate(8deg);
+        transform: translate3d(10px,9px,0) rotate(8deg)
     }
 
     80% {
-        transform: translate3d(14px, 20px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(14px,20px,0) rotate(2deg);
+        transform: translate3d(14px,20px,0) rotate(2deg)
     }
 
     90% {
-        transform: translate3d(12px, 18px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(12px,18px,0) rotate(4deg);
+        transform: translate3d(12px,18px,0) rotate(4deg)
     }
 
     100% {
-        transform: translate3d(10px, 14px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(10px,14px,0) rotate(0);
+        transform: translate3d(10px,14px,0) rotate(0)
     }
 }
 
 @keyframes pillow1 {
     0% {
-        transform: translate3d(10px, 14px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(10px,14px,0) rotate(0);
+        transform: translate3d(10px,14px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(15px, 18px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(15px,18px,0) rotate(4deg);
+        transform: translate3d(15px,18px,0) rotate(4deg)
     }
 
     20% {
-        transform: translate3d(20px, 24px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(20px,24px,0) rotate(2deg);
+        transform: translate3d(20px,24px,0) rotate(2deg)
     }
 
     30% {
-        transform: translate3d(18px, 20px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(18px,20px,0) rotate(8deg);
+        transform: translate3d(18px,20px,0) rotate(8deg)
     }
 
     40% {
-        transform: translate3d(10px, 14px, 0px) rotate(16deg);
+        -webkit-transform: translate3d(10px,14px,0) rotate(16deg);
+        transform: translate3d(10px,14px,0) rotate(16deg)
     }
 
     50% {
-        transform: translate3d(6px, 10px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(6px,10px,0) rotate(10deg);
+        transform: translate3d(6px,10px,0) rotate(10deg)
     }
 
     60% {
-        transform: translate3d(0px, 2px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(0,2px,0) rotate(4deg);
+        transform: translate3d(0,2px,0) rotate(4deg)
     }
 
     70% {
-        transform: translate3d(10px, 9px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(10px,9px,0) rotate(8deg);
+        transform: translate3d(10px,9px,0) rotate(8deg)
     }
 
     80% {
-        transform: translate3d(14px, 20px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(14px,20px,0) rotate(2deg);
+        transform: translate3d(14px,20px,0) rotate(2deg)
     }
 
     90% {
-        transform: translate3d(12px, 18px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(12px,18px,0) rotate(4deg);
+        transform: translate3d(12px,18px,0) rotate(4deg)
     }
 
     100% {
-        transform: translate3d(10px, 14px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(10px,14px,0) rotate(0);
+        transform: translate3d(10px,14px,0) rotate(0)
     }
 }
 
 @-webkit-keyframes pillow2 {
     0% {
-        transform: translate3d(20px, 4px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(20px,4px,0) rotate(0);
+        transform: translate3d(20px,4px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(24px, 8px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(24px,8px,0) rotate(6deg);
+        transform: translate3d(24px,8px,0) rotate(6deg)
     }
 
     20% {
-        transform: translate3d(30px, 12px, 0px) rotate(3deg);
+        -webkit-transform: translate3d(30px,12px,0) rotate(3deg);
+        transform: translate3d(30px,12px,0) rotate(3deg)
     }
 
     30% {
-        transform: translate3d(22px, 8px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(22px,8px,0) rotate(2deg);
+        transform: translate3d(22px,8px,0) rotate(2deg)
     }
 
     40% {
-        transform: translate3d(18px, 6px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(18px,6px,0) rotate(10deg);
+        transform: translate3d(18px,6px,0) rotate(10deg)
     }
 
     50% {
-        transform: translate3d(12px, 4px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(12px,4px,0) rotate(2deg);
+        transform: translate3d(12px,4px,0) rotate(2deg)
     }
 
     60% {
-        transform: translate3d(4px, 2px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(4px,2px,0) rotate(6deg);
+        transform: translate3d(4px,2px,0) rotate(6deg)
     }
 
     70% {
-        transform: translate3d(8px, 6px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(8px,6px,0) rotate(4deg);
+        transform: translate3d(8px,6px,0) rotate(4deg)
     }
 
     80% {
-        transform: translate3d(14px, 8px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(14px,8px,0) rotate(8deg);
+        transform: translate3d(14px,8px,0) rotate(8deg)
     }
 
     90% {
-        transform: translate3d(12px, 18px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(12px,18px,0) rotate(4deg);
+        transform: translate3d(12px,18px,0) rotate(4deg)
     }
 
     100% {
-        transform: translate3d(20px, 4px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(20px,4px,0) rotate(0);
+        transform: translate3d(20px,4px,0) rotate(0)
     }
 }
 
 @keyframes pillow2 {
     0% {
-        transform: translate3d(20px, 4px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(20px,4px,0) rotate(0);
+        transform: translate3d(20px,4px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(24px, 8px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(24px,8px,0) rotate(6deg);
+        transform: translate3d(24px,8px,0) rotate(6deg)
     }
 
     20% {
-        transform: translate3d(30px, 12px, 0px) rotate(3deg);
+        -webkit-transform: translate3d(30px,12px,0) rotate(3deg);
+        transform: translate3d(30px,12px,0) rotate(3deg)
     }
 
     30% {
-        transform: translate3d(22px, 8px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(22px,8px,0) rotate(2deg);
+        transform: translate3d(22px,8px,0) rotate(2deg)
     }
 
     40% {
-        transform: translate3d(18px, 6px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(18px,6px,0) rotate(10deg);
+        transform: translate3d(18px,6px,0) rotate(10deg)
     }
 
     50% {
-        transform: translate3d(12px, 4px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(12px,4px,0) rotate(2deg);
+        transform: translate3d(12px,4px,0) rotate(2deg)
     }
 
     60% {
-        transform: translate3d(4px, 2px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(4px,2px,0) rotate(6deg);
+        transform: translate3d(4px,2px,0) rotate(6deg)
     }
 
     70% {
-        transform: translate3d(8px, 6px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(8px,6px,0) rotate(4deg);
+        transform: translate3d(8px,6px,0) rotate(4deg)
     }
 
     80% {
-        transform: translate3d(14px, 8px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(14px,8px,0) rotate(8deg);
+        transform: translate3d(14px,8px,0) rotate(8deg)
     }
 
     90% {
-        transform: translate3d(12px, 18px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(12px,18px,0) rotate(4deg);
+        transform: translate3d(12px,18px,0) rotate(4deg)
     }
 
     100% {
-        transform: translate3d(20px, 4px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(20px,4px,0) rotate(0);
+        transform: translate3d(20px,4px,0) rotate(0)
     }
 }
 
 @-webkit-keyframes pillow3 {
     0% {
-        transform: translate3d(4px, 8px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(4px,8px,0) rotate(0);
+        transform: translate3d(4px,8px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(8px, 14px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(8px,14px,0) rotate(10deg);
+        transform: translate3d(8px,14px,0) rotate(10deg)
     }
 
     20% {
-        transform: translate3d(12px, 18px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(12px,18px,0) rotate(8deg);
+        transform: translate3d(12px,18px,0) rotate(8deg)
     }
 
     30% {
-        transform: translate3d(6px, 10px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(6px,10px,0) rotate(4deg);
+        transform: translate3d(6px,10px,0) rotate(4deg)
     }
 
     40% {
-        transform: translate3d(4px, 4px, 0px) rotate(12deg);
+        -webkit-transform: translate3d(4px,4px,0) rotate(12deg);
+        transform: translate3d(4px,4px,0) rotate(12deg)
     }
 
     50% {
-        transform: translate3d(2px, 10px, 0px) rotate(14deg);
+        -webkit-transform: translate3d(2px,10px,0) rotate(14deg);
+        transform: translate3d(2px,10px,0) rotate(14deg)
     }
 
     60% {
-        transform: translate3d(8px, 14px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(8px,14px,0) rotate(10deg);
+        transform: translate3d(8px,14px,0) rotate(10deg)
     }
 
     70% {
-        transform: translate3d(12px, 20px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(12px,20px,0) rotate(8deg);
+        transform: translate3d(12px,20px,0) rotate(8deg)
     }
 
     80% {
-        transform: translate3d(16px, 10px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(16px,10px,0) rotate(6deg);
+        transform: translate3d(16px,10px,0) rotate(6deg)
     }
 
     90% {
-        transform: translate3d(12px, 18px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(12px,18px,0) rotate(4deg);
+        transform: translate3d(12px,18px,0) rotate(4deg)
     }
 
     100% {
-        transform: translate3d(4px, 8px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(4px,8px,0) rotate(0);
+        transform: translate3d(4px,8px,0) rotate(0)
     }
 }
 
 @keyframes pillow3 {
     0% {
-        transform: translate3d(4px, 8px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(4px,8px,0) rotate(0);
+        transform: translate3d(4px,8px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(8px, 14px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(8px,14px,0) rotate(10deg);
+        transform: translate3d(8px,14px,0) rotate(10deg)
     }
 
     20% {
-        transform: translate3d(12px, 18px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(12px,18px,0) rotate(8deg);
+        transform: translate3d(12px,18px,0) rotate(8deg)
     }
 
     30% {
-        transform: translate3d(6px, 10px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(6px,10px,0) rotate(4deg);
+        transform: translate3d(6px,10px,0) rotate(4deg)
     }
 
     40% {
-        transform: translate3d(4px, 4px, 0px) rotate(12deg);
+        -webkit-transform: translate3d(4px,4px,0) rotate(12deg);
+        transform: translate3d(4px,4px,0) rotate(12deg)
     }
 
     50% {
-        transform: translate3d(2px, 10px, 0px) rotate(14deg);
+        -webkit-transform: translate3d(2px,10px,0) rotate(14deg);
+        transform: translate3d(2px,10px,0) rotate(14deg)
     }
 
     60% {
-        transform: translate3d(8px, 14px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(8px,14px,0) rotate(10deg);
+        transform: translate3d(8px,14px,0) rotate(10deg)
     }
 
     70% {
-        transform: translate3d(12px, 20px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(12px,20px,0) rotate(8deg);
+        transform: translate3d(12px,20px,0) rotate(8deg)
     }
 
     80% {
-        transform: translate3d(16px, 10px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(16px,10px,0) rotate(6deg);
+        transform: translate3d(16px,10px,0) rotate(6deg)
     }
 
     90% {
-        transform: translate3d(12px, 18px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(12px,18px,0) rotate(4deg);
+        transform: translate3d(12px,18px,0) rotate(4deg)
     }
 
     100% {
-        transform: translate3d(4px, 8px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(4px,8px,0) rotate(0);
+        transform: translate3d(4px,8px,0) rotate(0)
     }
 }
 
 @-webkit-keyframes pillow4 {
     0% {
-        transform: translate3d(20px, 10px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(20px,10px,0) rotate(0);
+        transform: translate3d(20px,10px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(24px, 14px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(24px,14px,0) rotate(4deg);
+        transform: translate3d(24px,14px,0) rotate(4deg)
     }
 
     20% {
-        transform: translate3d(18px, 10px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(18px,10px,0) rotate(6deg);
+        transform: translate3d(18px,10px,0) rotate(6deg)
     }
 
     30% {
-        transform: translate3d(12px, 4px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(12px,4px,0) rotate(8deg);
+        transform: translate3d(12px,4px,0) rotate(8deg)
     }
 
     40% {
-        transform: translate3d(10px, 6px, 0px) rotate(14deg);
+        -webkit-transform: translate3d(10px,6px,0) rotate(14deg);
+        transform: translate3d(10px,6px,0) rotate(14deg)
     }
 
     50% {
-        transform: translate3d(20px, 14px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(20px,14px,0) rotate(10deg);
+        transform: translate3d(20px,14px,0) rotate(10deg)
     }
 
     60% {
-        transform: translate3d(24px, 18px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(24px,18px,0) rotate(6deg);
+        transform: translate3d(24px,18px,0) rotate(6deg)
     }
 
     70% {
-        transform: translate3d(18px, 16px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(18px,16px,0) rotate(4deg);
+        transform: translate3d(18px,16px,0) rotate(4deg)
     }
 
     80% {
-        transform: translate3d(16px, 14px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(16px,14px,0) rotate(2deg);
+        transform: translate3d(16px,14px,0) rotate(2deg)
     }
 
     90% {
-        transform: translate3d(18px, 12px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(18px,12px,0) rotate(4deg);
+        transform: translate3d(18px,12px,0) rotate(4deg)
     }
 
     100% {
-        transform: translate3d(20px, 10px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(20px,10px,0) rotate(0);
+        transform: translate3d(20px,10px,0) rotate(0)
     }
 }
 
 @keyframes pillow4 {
     0% {
-        transform: translate3d(20px, 10px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(20px,10px,0) rotate(0);
+        transform: translate3d(20px,10px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(24px, 14px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(24px,14px,0) rotate(4deg);
+        transform: translate3d(24px,14px,0) rotate(4deg)
     }
 
     20% {
-        transform: translate3d(18px, 10px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(18px,10px,0) rotate(6deg);
+        transform: translate3d(18px,10px,0) rotate(6deg)
     }
 
     30% {
-        transform: translate3d(12px, 4px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(12px,4px,0) rotate(8deg);
+        transform: translate3d(12px,4px,0) rotate(8deg)
     }
 
     40% {
-        transform: translate3d(10px, 6px, 0px) rotate(14deg);
+        -webkit-transform: translate3d(10px,6px,0) rotate(14deg);
+        transform: translate3d(10px,6px,0) rotate(14deg)
     }
 
     50% {
-        transform: translate3d(20px, 14px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(20px,14px,0) rotate(10deg);
+        transform: translate3d(20px,14px,0) rotate(10deg)
     }
 
     60% {
-        transform: translate3d(24px, 18px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(24px,18px,0) rotate(6deg);
+        transform: translate3d(24px,18px,0) rotate(6deg)
     }
 
     70% {
-        transform: translate3d(18px, 16px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(18px,16px,0) rotate(4deg);
+        transform: translate3d(18px,16px,0) rotate(4deg)
     }
 
     80% {
-        transform: translate3d(16px, 14px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(16px,14px,0) rotate(2deg);
+        transform: translate3d(16px,14px,0) rotate(2deg)
     }
 
     90% {
-        transform: translate3d(18px, 12px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(18px,12px,0) rotate(4deg);
+        transform: translate3d(18px,12px,0) rotate(4deg)
     }
 
     100% {
-        transform: translate3d(20px, 10px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(20px,10px,0) rotate(0);
+        transform: translate3d(20px,10px,0) rotate(0)
     }
 }
 
 @-webkit-keyframes pillow5 {
     0% {
-        transform: translate3d(30px, 20px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(30px,20px,0) rotate(0);
+        transform: translate3d(30px,20px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(34px, 26px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(34px,26px,0) rotate(8deg);
+        transform: translate3d(34px,26px,0) rotate(8deg)
     }
 
     20% {
-        transform: translate3d(26px, 20px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(26px,20px,0) rotate(4deg);
+        transform: translate3d(26px,20px,0) rotate(4deg)
     }
 
     30% {
-        transform: translate3d(20px, 16px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(20px,16px,0) rotate(6deg);
+        transform: translate3d(20px,16px,0) rotate(6deg)
     }
 
     40% {
-        transform: translate3d(14px, 12px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(14px,12px,0) rotate(10deg);
+        transform: translate3d(14px,12px,0) rotate(10deg)
     }
 
     50% {
-        transform: translate3d(10px, 8px, 0px) rotate(12deg);
+        -webkit-transform: translate3d(10px,8px,0) rotate(12deg);
+        transform: translate3d(10px,8px,0) rotate(12deg)
     }
 
     60% {
-        transform: translate3d(16px, 16px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(16px,16px,0) rotate(8deg);
+        transform: translate3d(16px,16px,0) rotate(8deg)
     }
 
     70% {
-        transform: translate3d(22px, 20px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(22px,20px,0) rotate(4deg);
+        transform: translate3d(22px,20px,0) rotate(4deg)
     }
 
     80% {
-        transform: translate3d(20px, 18px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(20px,18px,0) rotate(2deg);
+        transform: translate3d(20px,18px,0) rotate(2deg)
     }
 
     90% {
-        transform: translate3d(26px, 16px, 0px) rotate(7deg);
+        -webkit-transform: translate3d(26px,16px,0) rotate(7deg);
+        transform: translate3d(26px,16px,0) rotate(7deg)
     }
 
     100% {
-        transform: translate3d(30px, 20px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(30px,20px,0) rotate(0);
+        transform: translate3d(30px,20px,0) rotate(0)
     }
 }
 
 @keyframes pillow5 {
     0% {
-        transform: translate3d(30px, 20px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(30px,20px,0) rotate(0);
+        transform: translate3d(30px,20px,0) rotate(0)
     }
 
     10% {
-        transform: translate3d(34px, 26px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(34px,26px,0) rotate(8deg);
+        transform: translate3d(34px,26px,0) rotate(8deg)
     }
 
     20% {
-        transform: translate3d(26px, 20px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(26px,20px,0) rotate(4deg);
+        transform: translate3d(26px,20px,0) rotate(4deg)
     }
 
     30% {
-        transform: translate3d(20px, 16px, 0px) rotate(6deg);
+        -webkit-transform: translate3d(20px,16px,0) rotate(6deg);
+        transform: translate3d(20px,16px,0) rotate(6deg)
     }
 
     40% {
-        transform: translate3d(14px, 12px, 0px) rotate(10deg);
+        -webkit-transform: translate3d(14px,12px,0) rotate(10deg);
+        transform: translate3d(14px,12px,0) rotate(10deg)
     }
 
     50% {
-        transform: translate3d(10px, 8px, 0px) rotate(12deg);
+        -webkit-transform: translate3d(10px,8px,0) rotate(12deg);
+        transform: translate3d(10px,8px,0) rotate(12deg)
     }
 
     60% {
-        transform: translate3d(16px, 16px, 0px) rotate(8deg);
+        -webkit-transform: translate3d(16px,16px,0) rotate(8deg);
+        transform: translate3d(16px,16px,0) rotate(8deg)
     }
 
     70% {
-        transform: translate3d(22px, 20px, 0px) rotate(4deg);
+        -webkit-transform: translate3d(22px,20px,0) rotate(4deg);
+        transform: translate3d(22px,20px,0) rotate(4deg)
     }
 
     80% {
-        transform: translate3d(20px, 18px, 0px) rotate(2deg);
+        -webkit-transform: translate3d(20px,18px,0) rotate(2deg);
+        transform: translate3d(20px,18px,0) rotate(2deg)
     }
 
     90% {
-        transform: translate3d(26px, 16px, 0px) rotate(7deg);
+        -webkit-transform: translate3d(26px,16px,0) rotate(7deg);
+        transform: translate3d(26px,16px,0) rotate(7deg)
     }
 
     100% {
-        transform: translate3d(30px, 20px, 0px) rotate(0deg);
+        -webkit-transform: translate3d(30px,20px,0) rotate(0);
+        transform: translate3d(30px,20px,0) rotate(0)
     }
 }
 
@@ -806,98 +946,145 @@
     width: 929px;
     height: 100%;
     position: absolute;
-    right: 0px;
-    top: 0px;
-    overflow: hidden;
+    right: 0;
+    top: 0;
+    overflow: hidden
 }
 
 .block--bg1 .bg1 {
     width: 1200px;
     height: 100%;
-    background-image: url("bg-1.jpg");
+    background-image: url(../images/dest/bg-1.jpg);
     background-repeat: no-repeat;
-    background-position: 135% 0px;
-    animation: 2s linear 0.1s 1 normal none running slideBg1;
+    background-position: 135% 0;
+    -webkit-animation: slideBg1 2s linear .1s;
+    animation: slideBg1 2s linear .1s
 }
 
 @-webkit-keyframes slideBg1 {
-    0% {
-        background-position: 0px 0px;
+    from {
+        background-position: 60% 0
     }
 
-    100% {
-        background-position: 135% 0px;
+    to {
+        background-position: 120% 0
     }
 }
 
 @keyframes slideBg1 {
-    0% {
-        background-position: 0px 0px;
+    from {
+        background-position: 60% 0
     }
 
-    100% {
-        background-position: 135% 0px;
+    to {
+        background-position: 120% 0
     }
 }
 
 .block--bg2 {
     width: 929px;
-    height: 100%;
+    height: calc(100% + 20px);
     position: absolute;
-    right: 0px;
-    top: 0px;
-    background-image: url("bg-2.png");
+    right: -20px;
+    top: -20px;
+    background-image: url(../images/dest/bg-2.png);
     background-repeat: no-repeat;
-    background-position: 100% 0px;
-    transform-origin: 129px 184px;
-    animation: 2s linear 0.1s 1 normal none running slideBg2;
+    background-position: 100% 0;
+    -webkit-transform-origin: 400px 1000px;
+    -ms-transform-origin: 400px 1000px;
+    transform-origin: 400px 1000px
+}
+
+.block.animate .block--bg2 {
+    -webkit-animation: slideBg2 2s linear .1s,rotateBg 1.5s linear infinite;
+    animation: slideBg2 2s linear .1s,rotateBg 1.5s linear infinite
 }
 
 @-webkit-keyframes slideBg2 {
     0% {
-        background-position: 500% 0px;
+        background-position: 500% 0
     }
 
     100% {
-        background-position: 100% 0px;
+        background-position: 100% 0
     }
 }
 
 @keyframes slideBg2 {
     0% {
-        background-position: 500% 0px;
+        background-position: 500% 0
     }
 
     100% {
-        background-position: 100% 0px;
+        background-position: 100% 0
     }
 }
 
 @-webkit-keyframes rotateBg {
     0% {
-        transform: rotate(2.4deg);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        background-position: 100% 0
     }
 
-    50% {
-        transform: rotate(0deg);
+    20% {
+        background-position: 140% 0
+    }
+
+    40% {
+        background-position: 160% 0
+    }
+
+    60% {
+        -webkit-transform: rotate(-.8deg);
+        transform: rotate(-.8deg);
+        background-position: 240% 0
+    }
+
+    80% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+        background-position: 140% 0
     }
 
     100% {
-        transform: rotate(2.4deg);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        background-position: 100% 0
     }
 }
 
 @keyframes rotateBg {
     0% {
-        transform: rotate(2.4deg);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        background-position: 100% 0
     }
 
-    50% {
-        transform: rotate(0deg);
+    20% {
+        background-position: 140% 0
+    }
+
+    40% {
+        background-position: 160% 0
+    }
+
+    60% {
+        -webkit-transform: rotate(-.8deg);
+        transform: rotate(-.8deg);
+        background-position: 240% 0
+    }
+
+    80% {
+        -webkit-transform: rotate(2deg);
+        transform: rotate(2deg);
+        background-position: 140% 0
     }
 
     100% {
-        transform: rotate(2.4deg);
+        -webkit-transform: rotate(0);
+        transform: rotate(0);
+        background-position: 100% 0
     }
 }
 
@@ -906,9 +1093,12 @@
     height: 100%;
     position: absolute;
     right: 254px;
-    top: 0px;
-    background: linear-gradient(270deg, rgba(28, 28, 28, 0) 40%, rgb(28, 28, 28) 70%);
+    top: 0;
+    background: -webkit-gradient(linear,right top,left top,color-stop(40%,rgba(28,28,28,0)),color-stop(70%,#1c1c1c));
+    background: -o-linear-gradient(right,rgba(28,28,28,0) 40%,#1c1c1c 70%);
+    background: linear-gradient(270deg,rgba(28,28,28,0) 40%,#1c1c1c 70%)
 }
+
 
 
     </style>	
@@ -961,6 +1151,7 @@
 
 		let bg1 = document.querySelector('.js-parallax-bg1')
 		let bg2 = document.querySelector('.js-parallax-bg2')
+		let banner2 = document.querySelector('.js-block2');
 
 		function parallax2(event) {
 		    let shiftItemX1 = event.clientX*Number(20)/1000
@@ -969,11 +1160,11 @@
 		    bg2.style.transform = `translate3d(${shiftItemX2}px, 0px, 0px)`
 		}
 
-		if (document.querySelector('.js-block2')) {
-		    setTimeout(() => {
-		    	document.querySelector('.js-block2').addEventListener('mousemove', parallax2)   
-		    }, 1200)
+		if (banner2) {
+		    banner2.addEventListener('mousemove', parallax2) 
 		}
+
+
 	});
 </script>	
 
