@@ -20,6 +20,19 @@
     box-sizing: border-box
 }
 
+
+
+body,html {
+    padding: 0;
+    margin: 0;
+    height: 100%
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
 .block {
     cursor: pointer;
     width: 1836px;
@@ -1101,10 +1114,12 @@
 
 
 
+
+
     </style>	
 </head>
 <body>
-<div class="block js-block2">
+<div class="block js-block2 animate">
     <div class="block--bg1">
         <div class="bg1 js-parallax-bg1"></div>
     </div>
@@ -1150,19 +1165,21 @@
 		}
 
 		let bg1 = document.querySelector('.js-parallax-bg1')
-		let bg2 = document.querySelector('.js-parallax-bg2')
-		let banner2 = document.querySelector('.js-block2');
+        let bg2 = document.querySelector('.js-parallax-bg2')
+        let banner2 = document.querySelector('.js-block2');
 
-		function parallax2(event) {
-		    let shiftItemX1 = event.clientX*Number(20)/1000
-		    let shiftItemX2 = event.clientX*Number(50)/1000
-		    bg1.style.transform = `translate3d(${shiftItemX1-40}px, 0px, 0px)`
-		    bg2.style.transform = `translate3d(${shiftItemX2}px, 0px, 0px)`
-		}
+        function parallax2(event) {
+            let shiftItemX1 = event.clientX*Number(20)/1000
+            let shiftItemX2 = event.clientX*Number(50)/1000
+            bg1.style.transform = `translate3d(${shiftItemX1-40}px, 0px, 0px)`
+            bg2.style.transform = `translate3d(${shiftItemX2}px, 0px, 0px)`
+        }
 
-		if (banner2) {
-		    banner2.addEventListener('mousemove', parallax2) 
-		}
+        if (banner2) {
+            banner2.addEventListener('mousemove', parallax2) 
+        }
+
+
 
 
 	});
