@@ -64,15 +64,14 @@ body,html {
 
 .block--cashback .eye-wr .eye-lid,.block--cashback .eye-wr .eyes {
     position: absolute;
-    left: 1em;
-    top: 1.3em;
-    width: 5.7em;
-    height: 5.7em;
+    left: 15px;
+    top: 15px;
+    width: 58px;
+    height: 58px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     text-align: center;
-    font-size: .65em
 }
 
 .block--cashback .eye-wr .eye-lid {
@@ -98,20 +97,19 @@ body,html {
     position: relative;
     display: inline-block;
     border-radius: 100%;
-    width: 75%;
-    height: 75%;
+    width: 26px;
+    height: 26px;
     background-color: #000
 }
 
 .block--cashback .eye-wr .eye:after {
-    --pupil-size: 1em;
     content: " ";
     position: absolute;
-    top: 1em;
-    left: 1em;
+    top: 7px;
+    right: 8px;
     border-radius: 100%;
-    width: var(--pupil-size);
-    height: var(--pupil-size);
+    width: 7px;
+    height: 7px;
     background: #fff
 }
 
@@ -241,7 +239,7 @@ body,html {
     width: 100%;
     font-size: 37px;
     font-weight: 400;
-    background: #ff3461;
+    background: #FF476F;
     border-radius: 13px;
     max-width: 332px;
     height: 74px;
@@ -1124,19 +1122,6 @@ body,html {
 
 <script>
 	document.addEventListener("DOMContentLoaded", function () {
-		let eyes = document.querySelector('.js-eye');
-
-		document.addEventListener("mousemove", mouseTracking);
-		function mouseTracking(e) {
-		    if (eyes) {
-		        let mouseX = eyes.getBoundingClientRect().left;
-		        let mouseY = eyes.getBoundingClientRect().top;
-		        let radianDegrees = Math.atan2(e.pageX - mouseX, e.pageY - mouseY);
-		        let rotationDegrees = radianDegrees * (180 / Math.PI) * -1 + 180;
-		        eyes.style.transform = `rotate(${rotationDegrees + 20}deg)`;
-		    }
-		}
-
 		function parallax(event) {
 		    document.querySelectorAll('.js-pillow').forEach(item => {
 		        let speed = item.getAttribute('data-speed')
