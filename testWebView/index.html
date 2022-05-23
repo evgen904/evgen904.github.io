@@ -146,6 +146,25 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+       $(".js-ellipsis-check").each(function() {
+           let el = $(this);
+           if (el.height() > 42) {
+               el.addClass("text-ellipsis-2")
+               el.parent().append($('<a href="javascript:void(0);" class="show-more-btn" onclick="commentShowMore(this)">Показать ещё...<\/a>'))
+           }
+       });
+       function commentShowMore(element) {
+           let el = $(element)
+           if (el.parent().hasClass("show-more")) {
+               el.parent().removeClass('show-more')
+               el.text("Показать еще...")
+           } else {
+               el.parent().addClass("show-more")
+               el.text("Скрыть")
+           }
+       }
+    </script>
 
 </div>
 
