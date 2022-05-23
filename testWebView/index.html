@@ -149,52 +149,11 @@
                     </div>
                    
 
-
-                    <script type="1e1c0f234568106e62e82185-text/javascript">
-                    $(".js-ellipsis-check").each(function() {
-                       let el = $(this);
-                       if (el.height() > 42) {
-                           el.addClass("text-ellipsis-2")
-                           el.parent().append($('<a href="javascript:void(0);" class="show-more-btn" onclick="commentShowMore(this)">Показать ещё...<\/a>'))
-                       }
-                    });
-                    function commentShowMore(element) {
-                       let el = $(element)
-                       if (el.parent().hasClass("show-more")) {
-                           el.parent().removeClass('show-more')
-                           el.text("Показать еще...")
-                       } else {
-                           el.parent().addClass("show-more")
-                           el.text("Скрыть")
-                       }
-                    }
-                    </script>
                     
                 </div>
             </div>
         </div>
-        <script id="response-template" type="text/x-tmpl">
-              <div class="media media-comment">
-                  <div class="media-left text-center">
-                      <div class="user-avatar user-avatar-sm stretch-img">
-                          <img
-                              class="media-object height-full img-circle"
-                              src="{%=o.userImage%}"
-                          >
-                      </div>
-                  </div>
-                  <div class="media-body">
-                      <div class="comment-text">
-                          <p>
-                              {%#o.userResponse%}
-                          </p>
-                      </div>
-                      <div class="comment-date text-small text-muted">
-                          {%=o.userResponseDate%}
-                      </div>
-                  </div>
-              </div>
-        </script>
+       
     </div>
 
 
