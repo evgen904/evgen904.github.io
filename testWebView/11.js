@@ -9116,11 +9116,11 @@ window.WP.modalAlert = function(message) {
     var options = {
         size: 1,
         box: {
-            header: { content: (T.core?.api_warning_heading || 'Внимание') + '!' },
+            header: { content: (T.core.api_warning_heading || 'Внимание') + '!' },
             body: { content: (message || '').toString() },
             footer: {},
             buttons: [
-                { content: (T.core?.word_ok || 'ОК'), closeModal: true, className: 'btn-primary' }
+                { content: (T.core.word_ok || 'ОК'), closeModal: true, className: 'btn-primary' }
             ]
         }
     };
@@ -9132,11 +9132,11 @@ window.WP.modalConfirm = function(message, callback) {
     var options = {
         size: 1,
         box: {
-            header: { content: (T.core?.api_warning_heading || 'Внимание') + '!' },
+            header: { content: (T.core.api_warning_heading || 'Внимание') + '!' },
             body: { content: (message || '').toString() },
             footer: {},
             buttons: [
-                { content: (T.core?.word_ok || 'ОК'), onclick: callback, closeModal: true, className: 'btn-primary' }, { content: (T.core?.word_cancel || 'Отмена'), closeModal: true, className: 'btn-default' }
+                { content: (T.core.word_ok || 'ОК'), onclick: callback, closeModal: true, className: 'btn-primary' }, { content: (T.core.word_cancel || 'Отмена'), closeModal: true, className: 'btn-default' }
             ]
         }
     };
