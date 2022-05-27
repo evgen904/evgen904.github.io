@@ -9113,14 +9113,16 @@ window.WP.modal = function(options) {
 
 window.WP.modalAlert = function(message) {
 
+	var modalHeader = T && T.core && T.core.api_warning_heading ? T.core.api_warning_heading : 'Внимание';
+	var modalBtnOk = T && T.core && T.core.word_ok ? T.core.word_ok : 'ОК';
     var options = {
         size: 1,
         box: {
-            header: { content: (T.core?.api_warning_heading || 'Внимание') + '!' },
+            header: { content: modalHeader + '!' },
             body: { content: (message || '').toString() },
             footer: {},
             buttons: [
-                { content: (T.core?.word_ok || 'ОК'), closeModal: true, className: 'btn-primary' }
+                { content: modalBtnOk, closeModal: true, className: 'btn-primary' }
             ]
         }
     };
@@ -9129,14 +9131,17 @@ window.WP.modalAlert = function(message) {
 
 window.WP.modalConfirm = function(message, callback) {
 
+	var modalHeader = T && T.core && T.core.api_warning_heading ? T.core.api_warning_heading : 'Внимание';
+	var modalBtnOk = T && T.core && T.core.word_ok ? T.core.word_ok : 'ОК';
+	var modalBtnCancel = T && T.core && T.core.word_cancel ? T.core.word_cancel : 'Отмена';
     var options = {
         size: 1,
         box: {
-            header: { content: (T.core?.api_warning_heading || 'Внимание') + '!' },
+            header: { content: modalHeader + '!' },
             body: { content: (message || '').toString() },
             footer: {},
             buttons: [
-                { content: (T.core?.word_ok || 'ОК'), onclick: callback, closeModal: true, className: 'btn-primary' }, { content: (T.core?.word_cancel || 'Отмена'), closeModal: true, className: 'btn-default' }
+                { content: modalBtnOk, onclick: callback, closeModal: true, className: 'btn-primary' }, { content: modalBtnCancel, closeModal: true, className: 'btn-default' }
             ]
         }
     };
