@@ -26,7 +26,7 @@ body,html {
     user-select: none
 }
 
-.block #click_area {
+#click_area {
     display: block; 
     text-decoration: none;
     color: #fff;
